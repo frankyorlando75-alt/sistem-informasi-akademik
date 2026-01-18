@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body class="bg-primary">
+    <header class="bg-danger border shadow my-4 py-2">
+    	<div class="container">
+    		<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <a class="navbar-brand link-light" href="#"><img src="gambar/logo.png" height="60" width="60"class="d-inline-block align-top me-2" alt="Logo">
+ <span class="fw-bold">SMKS ST.GABRIEL MAUMERE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav nav-tabs me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <span class="fw-bold"><a class="nav-link link-warning active" onclick="showPage('home')"id="navHome" href="#home"><i class="fa-solid fa-house"></i>Home</a>
+        </li>
+        <li class="nav-item">
+         <span class="fw-bold"> <a class="nav-link link-warning" onclick="showPage('jadwal')" id="navJadwal" " href="#jadwal"><i class="fa-solid fa-clipboard-list"></i>Jadwal KBM Kelas</a>
+        </li>
+        <li class="nav-item">
+         <span class="fw-bold"> <a class="nav-link link-warning" onclick="showPage('tentang')"id="navTentang" href="#tentang"><i class="fa-solid fa-address-card"></i>Tentang</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search"/>
+        <button class="btn btn-outline-light" type="submit">Cari</button>
+      </form>
+    </div>
+  </div>
+</nav>
+    	</div>
+       <!-- Spinner Overlay -->
+    <div class="spinner-overlay" id="downloadSpinner">
+        <div class="spinner-content">
+            <div class="spinner-border text-light" role="status"></div>
+            <p class="mt-3 fs-5">Sedang memproses download...</p>
+        </div>
+    </div>
+    </header>
+    <section id="homePage" class="page-section active""pt-5" style=" background-color: #f8f9fa;">
+  <div class="container pt-5">
+      <div class="card bg-">
+  <h1 class="card-header text-center bg-primary p-3 text-white"><img src="gambar/jam_berputar.gif" height="60" width="60"><marquee>" Selamat Datang Di Sistem Informasi Akademik "</h1></marquee>
+  <div class="card-body bg-light">
+   <h5 class="card-title text-center link-primary">“Teknologi Membantu Pendidikan Melangkah Lebih Maju, Aplikasi Jadwal KBM Adalah Wujud Keteraturan Dalam Dunia Belajar.”
+    <p class="card-text text-center ">Kelola Jadwal Pelajaran Anda Dengan Mudah dan Efisien!</h5></p>
+   
+  </div>
+</div>
+  </div><br>
+  <div class="container">
+  <div class="row g=3">
+  <div class="col-md-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <img src="gambar/calendar.png" height="50" width="50">
+        <h5 class="card-title">Jadwal Lengkap</h5>
+        <p class="card-text"> Akses Jadwal KBM Untuk Setiap Hari Dengan Detail Waktu, Mata Pelajaran, dan Guru Pengampu</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card text-center">
+      <div class="card-body">
+          <img src="gambar/kontak.png" height="50" width="50">
+        <h5 class="card-title">Kontak Cepat</h5>
+        <p class="card-text">Hubungi Guru Langsung Melalui WhatsApp Dengan Satu klik Untuk Koordinasi Yang Lebih Baik</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 ">
+    <div class="card text-center">
+      <div class="card-body">
+          <img src="gambar/unduh.png" height="50" width="50">
+        <h5 class="card-title">Download Jadwal</h5>
+        <p class="card-text">Simpan Jadwal Dalam Format JPG atau PDF Untuk Akses Offline Kapan Saja</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="text-center mt-4">
+                <button class="btn btn-primary btn-lg" onclick="showPage('jadwal')" style="padding: 15px 40px; border-radius: 12px; font-weight: 700;">
+                    <i class="fas fa-calendar-alt me-2"></i>
+                    Lihat Jadwal Sekarang
+                </button>
+            </div>
+</section>
+
+<section id="jadwalPage" class="page-section""pt-5" style="background-color: #e9ecef; ">
+  <div class="container pt-5">
+     <div class="container">
+  <div class="row g=3">
+  <div class="col-md-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <img src="gambar/calendar.png" height="50" width="50">
+        <h5 class="card-title">Hari Ini</h5>
+        <div class="info-value" id="selectedDay">Senin</div>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-center">
+      <div class="card-body">
+          <img src="gambar/clock.png" height="50" width="50">
+        <h5 class="card-title">Waktu Sekarang</h5>
+        <div class="info-value" style="font-size: 1.1rem;" id="timeDisplay">Loading...</div>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 ">
+    <div class="card text-center">
+      <div class="card-body">
+          <img src="gambar/mapel.png" height="50" width="50">
+        <h5 class="card-title">Total Mapel</h5>
+        <div class="info-value" id="totalSubjects">8</div>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="col-md-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <img src="gambar/guru.png" height="50" width="50">
+        <h5 class="card-title">Kelas</h5>
+        <div class="info-value">XII RPL 1</div>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="schedule-container">
+                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+                    <h3 class="mb-3 mb-md-0">
+                        <i class="fas fa-calendar-alt me-2"></i>
+                        Jadwal KBM
+                    </h3>
+                    <div>
+                        <button class="btn btn-success btn-download" onclick="downloadAsJPG()" id="btnDownloadJPG">
+                            <i class="fas fa-image me-2"></i>Download JPG
+                        </button>
+                        <button class="btn btn-danger btn-download" onclick="downloadAsPDF()" id="btnDownloadPDF">
+                            <i class="fas fa-file-pdf me-2"></i>Download PDF
+                        </button>
+                    </div>
+                </div>
+  <ul class="nav nav-pills mb-4 justify-content-center flex-wrap" id="dayPills">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-day="senin" onclick="selectDay('senin')">
+                            <i class="fas fa-calendar-day me-1"></i> Senin
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-day="selasa" onclick="selectDay('selasa')">
+                            <i class="fas fa-calendar-day me-1"></i> Selasa
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-day="rabu" onclick="selectDay('rabu')">
+                            <i class="fas fa-calendar-day me-1"></i> Rabu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-day="kamis" onclick="selectDay('kamis')">
+                            <i class="fas fa-calendar-day me-1"></i> Kamis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-day="jumat" onclick="selectDay('jumat')">
+                            <i class="fas fa-calendar-day me-1"></i> Jumat
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th width="10%"><i class="fas fa-list-ol me-2"></i>Jam Ke</th>
+                                <th width="20%"><i class="fas fa-clock me-2"></i>Waktu</th>
+                                <th width="25%"><i class="fas fa-book me-2"></i>Mata Pelajaran</th>
+                                <th width="25%"><i class="fas fa-user-tie me-2"></i>Guru Pengampu</th>
+                                <th width="20%"><i class="fas fa-phone me-2"></i>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scheduleTableBody">
+                            <!-- Data akan di-generate oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+</div>
+</div>
+</section>
+  </div>
+</section>
+<section id="tentangPage" class="page-section"pt-5" style=" background-color: #e9ecef;">
+   <div class="about-card">
+                <h2 class="about-title">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Tentang Sistem
+                </h2>
+                <p class="about-text">
+                    Sistem Informasi Akademik adalah aplikasi web yang dirancang untuk memudahkan siswa dan guru dalam mengakses jadwal Kegiatan Belajar Mengajar (KBM). Dengan antarmuka yang user-friendly dan fitur-fitur canggih, sistem ini membantu meningkatkan efisiensi dalam pengelolaan jadwal akademik.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h2 class="about-title">
+                    <i class="fas fa-star me-2"></i>
+                    Fitur Utama
+                </h2>
+                <div class="about-text">
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 15px;">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <strong>Jadwal Lengkap:</strong> Tampilkan jadwal untuk setiap hari dengan detail lengkap
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <strong>Integrasi WhatsApp:</strong> Hubungi guru langsung melalui WhatsApp
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <strong>Download Multi-Format:</strong> Simpan jadwal dalam format JPG atau PDF
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <strong>Tampilan Responsif:</strong> Akses dari perangkat apapun dengan nyaman
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <strong>Navigasi Mudah:</strong> Antarmuka yang intuitif dan mudah digunakan
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <h2 class="about-title">
+                    <i class="fas fa-envelope me-2"></i>
+                    Kontak & Informasi
+                </h2>
+                <p class="about-text">
+                    <strong>Kelas:</strong> XII RPL 1<br>
+                    <strong>Tahun Ajaran:</strong> 2025/2026<br>
+                    <strong>Semester:</strong> Genap<br>
+                    <strong>Total Mata Pelajaran:</strong> 8 Mapel<br>
+                    <strong>Hari Efektif:</strong> Senin - Jumat
+                </p>
+            </div>
+
+            <div class="about-card text-center">
+                <h2 class="about-title">
+                    <i class="fas fa-code me-2"></i>
+                    Teknologi yang Digunakan
+                </h2>
+                <div class="row mt-4">
+                    <div class="col-md-3 col-6 mb-3">
+                        <i class="fab fa-html5" style="font-size: 3rem; color: #e34c26;"></i>
+                        <p class="mt-2 fw-bold">HTML5</p>
+                    </div>
+                    <div class="col-md-3 col-6 mb-3">
+                        <i class="fab fa-css3-alt" style="font-size: 3rem; color: #264de4;"></i>
+                        <p class="mt-2 fw-bold">CSS3</p>
+                    </div>
+                    <div class="col-md-3 col-6 mb-3">
+                        <i class="fab fa-js" style="font-size: 3rem; color: #f0db4f;"></i>
+                        <p class="mt-2 fw-bold">JavaScript</p>
+                    </div>
+                    <div class="col-md-3 col-6 mb-3">
+                        <i class="fab fa-bootstrap" style="font-size: 3rem; color: #563d7c;"></i>
+                        <p class="mt-2 fw-bold">Bootstrap 5</p>
+                    </div>
+                </div>
+            </div>
+          </section>
+<!-- Footer -->
+<footer class="footer">
+<div class="card text-center ">
+  <div class="card-header bg-info link-danger"><span class="fw-bold">
+   SISTEM INFORMASI AKDEMIK - SMKS ST.GABRIEL MAUMERE</span>
+  </div>
+  <div class="card-body bg-danger">
+    <h5 class="card-title link-light">Pengembang</h5>
+    <p class="card-text link-light"> Copy Right Team Rekayasa Perangkat Lunak - 2026 </p>
+  </div>
+</div>
+ </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+  </body>
+
+</html>
